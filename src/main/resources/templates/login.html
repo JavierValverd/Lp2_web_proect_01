@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Getting Started: Serving Web Content</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>	
+
+<body>
+	<div style="margin-left:20%; width: 60%;">
+		<h1>Bienvenido:</h1>
+		<form th:action="@{/login}" method="post">
+			<P th:if="${errors}" th:text="Usuario o clave incorrecto"></P>
+			<div class="form-group">
+				<label for="codigo">Correo</label>
+				<input type="email" name="usuario" placeholder="Ingresa tu correo" class="form-control">
+			</div>
+			  <br>
+			  <div class="form-group">
+				  <label for="codigo">Contraseña</label>
+				  <input type="password"  name="clave" placeholder="INgresa tu clave" class="form-control">
+			  </div>
+			<button class="btn btn-primary">Ingresar</button>
+			<button type="button" class="btn btn-secondary">Registrar</button>
+		</form>
+	</div>
+</body>
+</html>
